@@ -1,9 +1,3 @@
-provider "google" {
-    credentials = file(var.gcp_credentials)
-    project = var.gcp_project_id
-    region = var.region
-    }
-    
 terraform {
   required_providers {
     google = {
@@ -12,3 +6,8 @@ terraform {
     }
   }
 }
+provider "google" {
+    credentials = "./key.json"
+    project = "rational-autumn-393513"
+    region = "us-west1"
+    }
